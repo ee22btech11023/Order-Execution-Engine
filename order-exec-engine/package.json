@@ -1,0 +1,26 @@
+{
+  "name": "order-exec-engine",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "worker": "ts-node-dev --respawn --transpile-only src/queue/worker.ts",
+    "test": "jest --runInBand"
+  },
+  "dependencies": {
+    "@fastify/websocket": "^8.0.0",
+    "bullmq": "^5.64.1",
+    "fastify": "^4.0.0",
+    "ioredis": "^5.3.2",
+    "pg": "^8.0.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "supertest": "^6.0.0",
+    "ts-jest": "^29.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.0"
+  }
+}
